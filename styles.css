@@ -1,100 +1,106 @@
 /* ======= Reset ======= */
 * {
-    margin: 0; /* Menghapus margin default pada semua elemen */
-    padding: 0; /* Menghapus padding default pada semua elemen */
-    box-sizing: border-box; /* Memastikan ukuran elemen termasuk padding dan border */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* ======= Animasi Bintang ======= */
 .stars {
-    position: fixed; /* Membuat latar belakang bintang tetap di tempat saat scroll */
+    position: fixed;
     width: 100%;
     height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/stardust.png'); /* Menggunakan tekstur bintang */
-    opacity: 0.5; /* Mengurangi kecerahan agar tidak terlalu mencolok */
-    z-index: -1; /* Mengirim elemen ke belakang agar tidak menghalangi konten */
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.5;
+    z-index: -1;
 }
 
 /* ======= Body ======= */
 body {
-    font-family: 'Poppins', sans-serif; /* Menggunakan font modern dari Google Fonts */
-    background: linear-gradient(135deg, #000000 40%, #4a148c 100%); /* Efek gradasi pada background */
-    color: white; /* Warna teks utama */
-    text-align: center; /* Teks berada di tengah */
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000 40%, #4a148c 100%);
+    color: white;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh; /* Minimal tinggi agar body mencakup seluruh viewport */
+    min-height: 100vh;
 }
 
 /* ======= Header ======= */
 header {
-    width: 100%; /* Memastikan header mencakup seluruh lebar layar */
-    background: rgba(1, 33, 65, 0.9); /* Warna latar belakang dengan sedikit transparansi */
-    padding: 15px 0; /* Memberikan ruang atas dan bawah */
+    position: relative;
+    width: 100%;
+    background: rgba(1, 33, 65, 0.9);
+    padding: 10px 0;
     text-align: center;
+    z-index: 10;
 }
 
 header h1 {
-    font-size: 24px; /* Ukuran font untuk judul */
-    font-weight: 600; /* Ketebalan font */
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 
 /* ======= Navigasi ======= */
 nav ul {
-    list-style: none; /* Menghilangkan bullet points dari daftar */
-    display: flex; /* Menggunakan flexbox agar menu sejajar */
-    justify-content: center; /* Pusatkan menu navigasi */
-    gap: 20px; /* Memberikan jarak antar item menu */
-    padding: 10px 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 8px 0;
 }
 
 nav a {
-    color: white; /* Warna teks */
-    text-decoration: none; /* Menghilangkan garis bawah pada link */
-    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
     font-weight: 400;
-    padding: 8px 15px;
-    transition: 0.3s; /* Efek transisi saat hover */
+    padding: 6px 12px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    background: rgba(255, 255, 255, 0.2); /* Warna latar belakang saat hover */
-    border-radius: 5px; /* Membuat sudut tombol lebih lembut */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
 }
 
 /* ======= Hero Section ======= */
 .hero {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Default untuk mobile */
     align-items: center;
     justify-content: center;
-    height: 80vh;
     text-align: center;
     gap: 20px;
-    padding: 20px;
+    padding: 50px 20px;
+    max-width: 900px;
 }
 
+/* Gaya Gambar Profil */
 .hero img {
-    width: 200px;
-    height: 280px;
-    border-radius: 50%; /* Membuat foto berbentuk lingkaran */
-    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
-    border: 4px solid white; /* Menambahkan border putih di sekitar gambar */
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    order: -1; /* Pastikan gambar ada di atas teks di tampilan mobile */
 }
 
+/* Teks di Hero */
 .hero-content {
     max-width: 600px;
     padding: 0 20px;
 }
 
 .hero h2 {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 600;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     margin-top: 10px;
 }
@@ -102,8 +108,8 @@ nav a:hover {
 /* ======= Tombol ======= */
 .btn {
     display: inline-block;
-    padding: 12px 25px;
-    background: #FF9800; /* Warna tombol */
+    padding: 10px 20px;
+    background: #FF9800;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -113,7 +119,7 @@ nav a:hover {
 }
 
 .btn:hover {
-    background: #E65100; /* Warna tombol saat hover */
+    background: #E65100;
 }
 
 /* ======= Portofolio ======= */
@@ -123,7 +129,7 @@ nav a:hover {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Menyesuaikan ukuran grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -149,13 +155,13 @@ nav a:hover {
 
 /* ======= Ikon di Kontak ======= */
 .contact-info p {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 10px;
 }
 
 .contact-info i {
     margin-right: 10px;
-    font-size: 22px;
+    font-size: 20px;
     color: #FF9800;
 }
 
@@ -168,7 +174,7 @@ nav a:hover {
 }
 
 .social-icons a {
-    font-size: 28px;
+    font-size: 24px;
     color: white;
     transition: 0.3s;
 }
@@ -186,23 +192,41 @@ footer {
     margin-top: 20px;
 }
 
-/* ======= Responsif untuk Desktop ======= */
+/* ======= RESPONSIF ======= */
+
+/* Untuk tampilan desktop */
 @media (min-width: 768px) {
     .hero {
-        flex-direction: row-reverse; /* Foto di kiri, teks di kanan */
+        flex-direction: row; /* Gambar di kiri, teks di kanan */
         text-align: left;
         justify-content: center;
+        align-items: center;
         gap: 50px;
         max-width: 900px;
         margin: auto;
     }
 
     .hero img {
-        width: 220px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
+        order: -1; /* Pastikan gambar tetap di kiri */
     }
 
     .hero-content {
         text-align: left;
     }
 }
+
+/* Untuk tampilan mobile */
+@media (max-width: 767px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero img {
+        order: -1; /* Pastikan gambar tetap di atas */
+    }
+}
+
