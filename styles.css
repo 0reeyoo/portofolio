@@ -205,26 +205,12 @@ footer {
         max-width: 900px;
         margin: auto;
     }
-
-    .hero img {
-        order: 0; /* Pastikan foto ada di kiri */
+.hero img {
+        order: -1; /* Pastikan foto selalu di kiri */
     }
 
     .hero-content {
         text-align: left;
     }
 }
-
-/* Untuk tampilan mobile */
-@media (max-width: 767px) {
-    .hero {
-        flex-direction: column; /* Foto tetap di atas */
-        align-items: center;
-        text-align: center;
-    }
-
-    .hero img {
-        order: -1; /* Pastikan gambar tetap di atas */
-    }
-}
-
+   
