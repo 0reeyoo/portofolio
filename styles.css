@@ -69,23 +69,24 @@ nav a:hover {
 /* ======= Hero Section ======= */
 .hero {
     display: flex;
-    flex-direction: column; /* Default untuk mobile */
+    flex-direction: row; /* Foto di kiri, teks di kanan */
     align-items: center;
     justify-content: center;
-    text-align: center;
-    gap: 20px;
-    padding: 50px 20px;
+    text-align: left;
+    gap: 50px;
     max-width: 900px;
+    margin: auto;
+    padding: 50px 20px;
 }
 
 /* Gaya Gambar Profil */
 .hero img {
     width: 220px;
-    height: 300px; /* Lebih tinggi untuk bentuk lonjong */
-    border-radius: 40%;
+    height: 300px; /* Supaya lebih lonjong */
+    border-radius: 50% / 70%; /* Bentuk oval vertikal */
     object-fit: cover;
     border: 4px solid white;
-    order: -1; /* Default mobile: gambar di atas teks */
+    flex-shrink: 0; /* Biar fotonya nggak mengecil */
 }
 
 /* Teks di Hero */
@@ -193,24 +194,15 @@ footer {
 }
 
 /* ======= RESPONSIF ======= */
-
-/* Untuk tampilan desktop */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .hero {
-        flex-direction: row; /* Foto di kiri, teks di kanan */
-        text-align: left;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        max-width: 900px;
-        margin: auto;
-    }
-.hero img {
-        order: -1; /* Pastikan foto selalu di kiri */
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
     }
 
-    .hero-content {
-        text-align: left;
+    .hero img {
+        width: 180px;
+        height: 250px;
     }
 }
-   
