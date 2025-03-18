@@ -5,16 +5,6 @@
     box-sizing: border-box;
 }
 
-/* ======= Animasi Bintang ======= */
-.stars {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: url('https://www.transparenttextures.com/patterns/stardust.png');
-    opacity: 0.5;
-    z-index: -1;
-}
-
 /* ======= Body ======= */
 body {
     font-family: 'Poppins', sans-serif;
@@ -29,7 +19,6 @@ body {
 
 /* ======= Header ======= */
 header {
-    position: relative;
     width: 100%;
     background: rgba(1, 33, 65, 0.9);
     padding: 10px 0;
@@ -66,103 +55,47 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* ======= Hero Section ======= */
-.hero {
-    display: flex;
-    flex-direction: column; /* Default untuk mobile */
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 20px;
-    padding: 50px 20px;
-    max-width: 900px;
-}
-
-/* Gaya Gambar Profil */
-.hero img {
-    width: 220px;
-    height: 300px; /* Lebih tinggi untuk bentuk lonjong */
-    border-radius: 40%;
-    object-fit: cover;
-    border: 4px solid white;
-    order: -1; /* Default mobile: gambar di atas teks */
-}
-
-/* Teks di Hero */
-.hero-content {
-    max-width: 600px;
-    padding: 0 20px;
-}
-
-.hero h2 {
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.hero p {
-    font-size: 16px;
-    font-weight: 300;
-    margin-top: 10px;
-}
-
-/* ======= Tombol ======= */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #FF9800;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 25px;
-    margin-top: 15px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background: #E65100;
-}
-
-/* ======= Portofolio ======= */
-.portfolio-container {
-    padding: 40px;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* ======= Halaman Kontak ======= */
+.contact-container {
+    display: block; /* Agar lebih responsif di HP */
     padding: 20px;
 }
 
-.portfolio-item img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* ======= Halaman Kontak ======= */
-.contact-container {
-    display: flex;
-    justify-content: center;
-    padding: 50px;
-}
-
+/* ======= Kartu Kontak ======= */
 .contact-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
+    max-width: 90%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
     border-radius: 10px;
     text-align: left;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
 }
 
-/* ======= Ikon di Kontak ======= */
+/* ======= Info Kontak ======= */
 .contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Beri jarak antara ikon dan teks */
     font-size: 16px;
     margin-bottom: 10px;
 }
 
+/* ======= Ikon Kontak ======= */
 .contact-info i {
-    margin-right: 10px;
     font-size: 20px;
     color: #FF9800;
+}
+
+/* ======= Link Kontak ======= */
+.contact-info a {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
 }
 
 /* ======= Ikon Sosial ======= */
@@ -192,25 +125,22 @@ footer {
     margin-top: 20px;
 }
 
-/* ======= RESPONSIF ======= */
-
-/* Untuk tampilan desktop */
-@media (min-width: 768px) {
-    .hero {
-        flex-direction: row; /* Foto di kiri, teks di kanan */
-        text-align: left;
-        justify-content: center;
-        align-items: center;
-        gap: 50px;
-        max-width: 900px;
-        margin: auto;
-    }
-.hero img {
-        order: -1; /* Pastikan foto selalu di kiri */
+/* ======= RESPONSIF UNTUK MOBILE ======= */
+@media (max-width: 600px) {
+    .contact-card {
+        padding: 15px;
+        font-size: 14px;
     }
 
-    .hero-content {
-        text-align: left;
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    .contact-info i {
+        font-size: 18px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
     }
 }
-
