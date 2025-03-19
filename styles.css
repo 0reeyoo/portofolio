@@ -106,40 +106,20 @@ nav a:hover {
 }
 
 /* ======= Tombol ======= */
-.buttons {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
 .btn {
-    display: inline-flex;
-    align-items: center;
+    display: inline-block;
     padding: 10px 20px;
     background: #FF9800;
     color: white;
     text-decoration: none;
     font-weight: bold;
     border-radius: 25px;
+    margin-top: 15px;
     transition: 0.3s;
-}
-
-.btn i {
-    margin-right: 8px;
 }
 
 .btn:hover {
     background: #E65100;
-}
-
-/* Tombol GitHub */
-.github {
-    background: #333;
-}
-
-.github:hover {
-    background: #555;
 }
 
 /* ======= Portofolio ======= */
@@ -201,6 +181,26 @@ nav a:hover {
 
 .social-icons a:hover {
     color: #FF9800;
+}
+
+/* ======= Styling Ikon GitHub ======= */
+.github-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ff8ea3;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 24px;
+    color: #ff8ea3;
+    transition: 0.3s;
+}
+
+.github-icon:hover {
+    background: #ff8ea3;
+    color: black;
 }
 
 /* ======= Footer ======= */
